@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class MatakuliahDemo04 {
 
     public static void main(String[] args) {
-        String kode, nama, dummy;
-        int sks, jumlahJam, jumlahMtakul;
+        int jumlahMtakul;
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan jumlah mata kuliah : ");
@@ -21,5 +20,6 @@ public class MatakuliahDemo04 {
             System.out.println("\nData Mata Kuliah ke-" + (i + 1));
             arrayofMatakuliah[i].cetakInfo();
         }
+        sc.close();
     }
 }

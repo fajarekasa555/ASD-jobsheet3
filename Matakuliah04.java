@@ -33,6 +33,7 @@ public class Matakuliah04 {
         System.out.print("Jumlah Jam\t: ");
         this.jumlahJam = Integer.parseInt(sc.nextLine());
         System.out.println("------------------------------------------------");
+        sc.close();
     }
 
     public void cetakInfo() {
@@ -42,4 +43,5 @@ public class Matakuliah04 {
         System.out.println("Jumlah Jam\t: " + this.jumlahJam);
         System.out.println("------------------------------------------------");
     }
+
 }

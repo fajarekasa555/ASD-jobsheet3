@@ -27,5 +27,7 @@ public class MahasiswaDemo04 {
             arrayMahasiswa[i].cetakInfo();
         }
 
+        sc.close();
+
     }
 }
