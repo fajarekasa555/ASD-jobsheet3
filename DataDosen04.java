@@ -1,12 +1,12 @@
 public class DataDosen04 {
-    void dataSemuaDosen(Dosen04[] arrayofDosen){
+    static void dataSemuaDosen(Dosen04[] arrayofDosen){
+        System.out.println("\nData Semua Dosen");
         for (Dosen04 dosen : arrayofDosen) {
-            System.out.println("\nData Semua Dosen");
             dosen.cetakInfo();
         }
     }
 
-    void jumlahDosenperJumlahKelamin(Dosen04[] arrayofDosen){
+    static void jumlahDosenperJumlahKelamin(Dosen04[] arrayofDosen){
         int jumlahLaki = 0, jumlahPerempuan = 0;
         for (Dosen04 dosen : arrayofDosen){
             if(dosen.jenisKelamin == true){
@@ -19,7 +19,7 @@ public class DataDosen04 {
         System.out.println("Jumlah Dosen Perempuan\t : " + jumlahPerempuan);
     }
 
-    void rataUsiaPerJenisKlmn(Dosen04[] arrayofDosen){
+    static void rataUsiaPerJenisKlmn(Dosen04[] arrayofDosen){
         int jumlahLaki = 0, jumlahPerempuan = 0, totalUsiaLaki = 0, totalUsiaPerempuan = 0;
         for (Dosen04 dosen : arrayofDosen){
             if(dosen.jenisKelamin == true){
@@ -34,7 +34,7 @@ public class DataDosen04 {
         System.out.println("Rata-rata Usia Dosen Perempuan\t : " + (jumlahPerempuan != 0 ? (totalUsiaPerempuan/jumlahPerempuan) : 0));
     }
 
-    void dosenSepuh(Dosen04[] arrayofDosen){
+    static void dosenSepuh(Dosen04[] arrayofDosen){
         Dosen04 dosenSepuh = arrayofDosen[0];
         for (Dosen04 dosen : arrayofDosen) {
             if(dosen.usia >  dosenSepuh.usia){
@@ -46,7 +46,7 @@ public class DataDosen04 {
     }
 
     // uji coba menggunakan lenght lewat parameter
-    void dosenMuda(Dosen04[] arrayofDosen, int lenght){
+    static void dosenMuda(Dosen04[] arrayofDosen, int lenght){
         int dosenId = 0, dosenMuda = arrayofDosen[0].usia;
         for (int i = 0; i < lenght; i++) {
             if(arrayofDosen[i].usia <  dosenMuda){
@@ -54,7 +54,7 @@ public class DataDosen04 {
                 dosenId = i;
             }
         }
-        System.out.println("\nInfo Dosen Paling Tua:");
+        System.out.println("\nInfo Dosen Paling Muda:");
         arrayofDosen[dosenId].cetakInfo();
     }
 }

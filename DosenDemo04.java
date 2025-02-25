@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.Scrollable;
-
 public class DosenDemo04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,13 +11,19 @@ public class DosenDemo04 {
         for(int i = 0; i < jmlDosen; i++){
             System.out.println("\nTambah data dosen ke-" + (i + 1));
             arrayofDosen[i] = new Dosen04();
-            arrayofDosen[i].inputDosen(sc);
+            arrayofDosen[i].inputDosen();
         }
 
-        for (int i = 0; i < jmlDosen; i++) {
-            System.out.println("\nData dosen ke-" + (i + 1));
-            arrayofDosen[i].cetakInfo();
-        }
+        // for (int i = 0; i < jmlDosen; i++) {
+        //     System.out.println("\nData dosen ke-" + (i + 1));
+        //     arrayofDosen[i].cetakInfo();
+        // }
+
+        DataDosen04.dataSemuaDosen(arrayofDosen);
+        DataDosen04.jumlahDosenperJumlahKelamin(arrayofDosen);
+        DataDosen04.rataUsiaPerJenisKlmn(arrayofDosen);
+        DataDosen04.dosenSepuh(arrayofDosen);
+        DataDosen04.dosenMuda(arrayofDosen, jmlDosen);
 
         sc.close();
     }

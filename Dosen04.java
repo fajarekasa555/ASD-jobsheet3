@@ -16,17 +16,22 @@ public class Dosen04 {
         this.usia = old;
     }
 
-    void inputDosen(Scanner sc){
+    void inputDosen(){
         String kelamin;
+        Scanner sc = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+
         System.out.print("Kode\t\t: ");
-        this.kode = sc.nextLine();
-        sc.nextLine();
+        this.kode = sc2.nextLine();
+
         System.out.print("Nama\t\t: ");
         this.nama = sc.nextLine();
+
         System.out.println("Jenis Kelamin (Pria / Wanita) ");
         System.out.print("Jenis Kelamin\t: ");
-        kelamin = sc.nextLine();
+        kelamin = sc2.nextLine();
         this.jenisKelamin = kelamin.equalsIgnoreCase("pria") ? true : false;
+
         System.out.print("Usia\t\t: ");
         this.usia = sc.nextInt();
         System.out.println("------------------------------------------------");
@@ -34,10 +39,10 @@ public class Dosen04 {
     }
 
     void cetakInfo() {
-        System.out.println("Kode\t: " + this.kode);
-        System.out.println("Nama\t: " + this.nama);
+        System.out.println("Kode\t\t: " + this.kode);
+        System.out.println("Nama\t\t: " + this.nama);
         System.out.println("Jenis Kelamin\t: " + (this.jenisKelamin ? "Pria" : "Wanita"));
-        System.out.println("Usia\t: " + this.usia);
+        System.out.println("Usia\t\t: " + this.usia);
         System.out.println("------------------------------------------------");
     }
 
